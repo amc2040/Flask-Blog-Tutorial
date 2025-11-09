@@ -41,7 +41,14 @@ def index():
 def create():
     #determine if the page is being requested with a POST or GET request
     if request.method =='POST':
-        pass
+        #get the title and content that was submitted
+        title = request.form['title']
+        content = request.form['content']
+        
+
+
+        #display an error if title or content is not submitted
+        #else make a database connection and insert the blog post content
     
     return render_template('create.html')
 
