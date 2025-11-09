@@ -91,7 +91,7 @@ def edit(id):
         elif not content:
             flash('Content is required')
         else:
-            conn = get_db_connection
+            conn = get_db_connection()
             conn.execute('UPDATE posts SET title = ?, content = ? WHERE id = ?',(title, content, id))
             conn.commit()
             conn.close()
