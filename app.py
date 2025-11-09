@@ -118,7 +118,7 @@ def delete(id):
     conn =get_db_connection()
 
     #execute a delete query 
-    conn.execute('DELETE from posts WHERE id= ?', (id))
+    conn.execute('DELETE from posts WHERE id= ?', (id,))
     #commit and close the connection
     conn.commit()
     conn.close()
